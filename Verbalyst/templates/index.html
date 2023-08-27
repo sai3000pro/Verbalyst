@@ -142,11 +142,21 @@ before:z-[-5]">
         <div class="info">
           <h1 class="infoTitle font-bold lg:text-2xl">What is Verbalyst?</h1>
           <img class = "linebreak"src="https://www.freepnglogos.com/uploads/line-png/blue-lines-png-transparent-35.png">
-            <p class="infoList font-normal">We trip and fall over our own words, each one dragging us further and further into a hole. We stammer in embarrassment. Some of us create awkward silences; others ramble to disguise and gloss over anything and everything. The end result is the same: Our ideas weren’t effectively conveyed. We didn’t get the grades, job, or promotion. We vow to improve our speech and communication, but it keeps happening. Sure, some of us figure out what’s wrong and fix it, but for the vast majority of us, it takes time, effort, and possibly even money and/or visits to speech therapy. 
+            <p class="infoList font-normal">We trip and fall over our own words, each one dragging us further and further into a hole. We stammer in embarrassment. Some of us create awkward silences; others ramble to disguise and gloss over anything and everything. The end result is the same: Our ideas were not effectively conveyed. We didn’t get the grades, job, or promotion. We vow to improve our speech and communication, but it keeps happening. Sure, some of us figure out what’s wrong and fix it, but for the vast majority of us, it takes time, effort, and possibly even money and/or visits to speech therapy. 
               </p>
-              <p class="infoList font-normal">Verbalyst aims to fix this. Our website's AI looks for stutters, lisps, and other speech impediments that you might not even be consciously aware about while you’re presenting a speech you’ve prepared, reading a book, or even just conversing with a friend! It will help you locate your troublespots and your pain points, and track your progress. 
+              <p class="infoList font-normal my-5">Verbalyst aims to fix this. Our website's AI looks for stutters, lisps, and other speech impediments that you might not even be consciously aware about while you’re presenting a speech you’ve prepared, reading a book, or even just conversing with a friend! It will help you locate your troublespots and your pain points, and track your progress. 
                 </p> 
-              <!-- add two buttons here: Check out your progress / Learn more about Speech Impediments -->
+                <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                <a href="./stats.html" class="buttonMargin w-250 h-20  inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-cyan-900 hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300">
+              Check out your own progress
+             </a>
+      
+              <input type="file" id="uploadFile" accept=".mp4" style="display: none;" onchange="handleFileUpload(event)">
+              
+              <a href="./inspiration.html" class="buttonMargin w-250 h-20 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-cyan-900 hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300">
+                  Learn more about Speech Impediments
+              </a>
+              </div>
         </div>
       </section>
 

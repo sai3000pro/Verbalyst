@@ -63,11 +63,12 @@ font-size:15px;
 .answer{
     width:60%;
     margin-left:20%;
-    background-color:rgb(8, 145, 178);
+    /* background-color:rgb(8, 145, 178); */
     display:block;
     color:white;
 }
 .response{
-    background-color:rgb(8, 145, 178);
+    /* background-color:rgb(8, 145, 178); */
+    background-color: transparent;
     padding:100px;
 }
