@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbalyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="../static/styles.css">
+
+</head>
+<body>
+    
+
+  
+<section class="w-full
+relative
+overflow-hiddens
+block
+z-10
+
+bg-[url('https://cdn.discordapp.com/attachments/1143381987680329728/1145189601661694032/peepeepoologo3.png')]
+bg-cover
+bg-no-repeat
+bg-center
+
+before:content-['']
+before:absolute
+before:inset-0
+before:block
+before:bg-gradient-to-t
+before:from-cyan-600
+before:to-transparent 
+before:z-[-5]">
+
+
+
+<nav class="top border-gray-200 bg-transparent">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="./index.html" class="logoAndTitle flex items-center">
+        <img src="../static/img/logo.svg" class="h-8 mr-3" alt="Verbalyst Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap bg-gradient-to-l from-cyan-600 via-cyan-400 to-cyan-100
+        inline-block text-transparent bg-clip-text">Verbalyst</span>
+    </a>
+    <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 ml-3 text-sm text-gray-100 rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-hamburger">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+    <div class="hidden w-full" id="navbar-hamburger">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-000">
+        <li>
+          <a href="./index.html" class="block py-2 pl-3 pr-4 text-white bg-cyan-600 rounded" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="./stats.html" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-cyan-300">Your Stats</a>
+        </li>
+        <li>
+          <a href="./inspiration.html" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-cyan-400">Inspiration</a>
+        </li>
+        <li>
+          <a href="./exercises.html" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-cyan-500">Speech Exercises</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+      <img src="../static/img/coloredlogo.png" class="inline-block h-400"/>
+      <div class="my-50 py-50">
+        <h1 class="inline-block text-4xl mr-100 font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-5xl my-14">Verbalyst: Empowering Speech, Unleashing Confidence</h1>
+        </div>
+        <p class="mt-50 pt-50 mb-8 text-lg font-normal text-gray-100 font-semibold lg:text-xl sm:px-16 lg:px-48">Helping you get over your stutters, lisps, and other speech impediments so that you can be your best self.</p>
+        <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+          <a href="#" class="buttonMargin w-250 h-20 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-cyan-900 hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300" id="startRecord" onclick="scrollToBottom(event)">
+            Start Recording
+        </a>
+        
+        <script>
+        function scrollToBottom(event) {
+            event.preventDefault();
+    
+            window.scrollTo(0, document.body.scrollHeight - 1300);
+        }
+        function uploadFile() {
+          let uploadFileInput = document.getElementById('uploadFile');
+          uploadFileInput.click();
+        }
+        function handleFileUpload(event) {
+    const fileInput = event.target;
+    uploadedFile = fileInput.files[0];
+
+    // Send the uploaded file to the server
+    const formData = new FormData();
+    formData.append('file', uploadedFile);
+
+    fetch('/transcribe', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        // Redirect to stats.html with the transcription result as a query parameter
+        window.location.href = `stats.html?transcription=${encodeURIComponent(data)}`;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+        </script>
+        
+          <a href="#" class="buttonMargin w-250 h-20  inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-cyan-900 hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300" id="stopRecord" download="record.mp4" onclick="scrollToBottom(event)">
+            Stop Recording
+        </a>
+
+        <input type="file" id="uploadFile" accept=".mp4" style="display: none;" onchange="handleFileUpload(event)">
+        
+        <a href="#" class="buttonMargin w-250 h-20 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-cyan-900 hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300" id="uploadButton" onclick="uploadFile()">
+            Upload File
+        </a>
+        
+      </div>
+    </div>
+</section>
+
+
+
+
+      <section class="one">
+        <div id="transcriptionResult" class="text-gray-700"></div>
+
+        <video class="video"controls width="40%" height="40%"></video>
+        
+        <video class="video"id="vid2" width="40%" height="40%" controls></video>
+      </section>
+
+      <section class="two">
+        <div class="info">
+          <h1 class="infoTitle font-bold lg:text-2xl">What is Verbalyst?</h1>
+          <img class = "linebreak"src="https://www.freepnglogos.com/uploads/line-png/blue-lines-png-transparent-35.png">
+            <p class="infoList font-normal">We trip and fall over our own words, each one dragging us further and further into a hole. We stammer in embarrassment. Some of us create awkward silences; others ramble to disguise and gloss over anything and everything. The end result is the same: Our ideas weren’t effectively conveyed. We didn’t get the grades, job, or promotion. We vow to improve our speech and communication, but it keeps happening. Sure, some of us figure out what’s wrong and fix it, but for the vast majority of us, it takes time, effort, and possibly even money and/or visits to speech therapy. 
+              </p>
+              <p class="infoList font-normal">Verbalyst aims to fix this. Our website's AI looks for stutters, lisps, and other speech impediments that you might not even be consciously aware about while you’re presenting a speech you’ve prepared, reading a book, or even just conversing with a friend! It will help you locate your troublespots and your pain points, and track your progress. 
+                </p> 
+              <!-- add two buttons here: Check out your progress / Learn more about Speech Impediments -->
+        </div>
+      </section>
+
+    <!-- Footer -->
+      <footer class="footer w-full
+      relative
+      overflow-hidden
+      block
+      z-10
+      
+      bg-[url('https://cdn.discordapp.com/attachments/1143381987680329728/1145217224756445204/peepeepoologo7.png')]
+      bg-cover
+      bg-no-repeat
+      bg-center
+      
+      before:content-['']
+      before:absolute
+      before:inset-0
+      before:block
+      before:bg-gradient-to-t
+      before:from-gray-800
+      before:to-transparent 
+      before:z-[-5]">
+        <div class="footer1">
+          <img class="socialMedias" src="https://cdn.discordapp.com/attachments/1143381987680329728/1145209882333679676/peepeepoologo6.png"/>
+          <p class="names font-medium ">Frederick Chen, Enoch He, Saivenkat Jilla &nbsp &nbsp &nbsp &nbsp | &nbsp &nbsp &nbsp &nbsp ask@verbalyst.com</p>
+        </div>
+      </footer>
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+<script src="../static/index.js" charset="UTF-8"></script>
+<script>
+        
+  let constraintObj = { 
+      audio: true, 
+      video: { 
+          facingMode: "user", 
+          width: { min: 320, ideal: 540, max: 960 },
+          height: { min: 240, ideal: 300, max: 540 } 
+      } 
+  }; 
+  if (navigator.mediaDevices === undefined) {
+      navigator.mediaDevices = {};
+      navigator.mediaDevices.getUserMedia = function(constraintObj) {
+          let getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+          if (!getUserMedia) {
+              return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+          }
+          return new Promise(function(resolve, reject) {
+              getUserMedia.call(navigator, constraintObj, resolve, reject);
+          });
+      }
+  }else{
+      navigator.mediaDevices.enumerateDevices()
+      .then(devices => {
+          devices.forEach(device=>{
+              console.log(device.kind.toUpperCase(), device.label);
+              //, device.deviceId
+          })
+      })
+      .catch(err=>{
+          console.log(err.name, err.message);
+      })
+  }
+
+  navigator.mediaDevices.getUserMedia(constraintObj)
+  .then(function(mediaStreamObj) {
+      //connect the media stream to the first video element
+      let video = document.querySelector('video');
+      if ("srcObject" in video) {
+          video.srcObject = mediaStreamObj;
+      } else {
+          //old version
+          video.src = window.URL.createObjectURL(mediaStreamObj);
+      }
+      
+      
+      //add listeners for saving video/audio
+      let start = document.getElementById('startRecord');
+      let stop = document.getElementById('stopRecord');
+      let vidSave = document.getElementById('vid2');
+      let mediaRecorder = new MediaRecorder(mediaStreamObj);
+      let chunks = [];
+      
+      start.addEventListener('click', (ev)=>{
+          mediaRecorder.start();
+          console.log(mediaRecorder.state);
+      })
+      stop.addEventListener('click', (ev)=>{
+          mediaRecorder.stop();
+          console.log(mediaRecorder.state);
+      });
+      mediaRecorder.ondataavailable = function(ev) {
+          chunks.push(ev.data);
+      }
+      mediaRecorder.onstop = (ev)=>{
+          let blob = new Blob(chunks, { 'type' : 'video/mp4;' });
+          chunks = [];
+          let videoURL = window.URL.createObjectURL(blob);
+          vidSave.src = videoURL;
+      }
+  })
+  .catch(function(err) { 
+      console.log(err.name, err.message); 
+  });
+
+  
+mediaRecorder.onstop = (ev) => {
+    let blob = new Blob(chunks, { type: 'video/mp4;' });
+    chunks = [];
+    let videoURL = window.URL.createObjectURL(blob);
+    vidSave.src = videoURL;
+
+    // Display the download link and set its href attribute to the video URL
+    let downloadLink = document.getElementById('stopRecord');
+    downloadLink.style.display = 'block';
+    downloadLink.href = videoURL;
+}
+  
+</script>
+
+</body>
+</html>

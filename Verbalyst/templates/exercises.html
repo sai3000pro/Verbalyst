@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbalyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
+    <link rel="stylesheet" href="../static/styles.css">
+
+</head>
+<body>
+    
+
+  <!-- bg-[url('https://cdn.discordapp.com/attachments/1143381987680329728/1145189601661694032/peepeepoologo3.png')]
+bg-cover
+bg-no-repeat
+bg-center -->
+<section class="w-full
+relative
+overflow-hidden
+block
+z-10
+
+
+before:content-['']
+before:absolute
+before:inset-0
+before:block
+before:bg-gradient-to-t
+before:from-cyan-600
+before:to-transparent 
+before:z-[-5]">
+
+
+
+<nav class="top border-gray-200 bg-cyan-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="./index.html" class="logoAndTitle flex items-center">
+        <img src="../static/img/logo.svg" class="h-8 mr-3" alt="Verbalyst Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap bg-gradient-to-l from-cyan-600 via-cyan-400 to-cyan-100
+        inline-block text-transparent bg-clip-text">Verbalyst</span>
+    </a>
+    <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 ml-3 text-sm text-gray-100 rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-hamburger">
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+    </button>
+    <div class="hidden w-full" id="navbar-hamburger">
+      <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-000">
+        <li>
+          <a href="./index.html" class="block py-2 pl-3 pr-4 text-white bg-cyan-600 rounded" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="./stats.html" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-cyan-300">Your Stats</a>
+        </li>
+        <li>
+          <a href="./inspiration.html" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-cyan-400">Inspiration</a>
+        </li>
+        <li>
+          <a href="./exercises.html" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-cyan-500">Speech Exercises</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="default-carousel" class="relative w-full text-center text-2xl" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-96">
+         <!-- Item 1 -->
+         <div class="hidden duration-700 ease-in-out
+         bg-[url('https://cdn.discordapp.com/attachments/1143381987680329728/1145220178251104296/peepeepoologo11.png')]
+ bg-cover
+ bg-no-repeat
+ bg-center absolute block w-full" data-carousel-item>
+           <p class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-2" 
+           id="firstFlashcard">Peter Piper picked a peck of pickled peppers. A peck of pickled peppers Peter Piper picked. If Peter Piper picked a peck of pickled peppers, where's the peck of pickled peppers Peter Piper picked?</p>
+         </div>
+        <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out
+            bg-[url('https://cdn.discordapp.com/attachments/1143381987680329728/1145220273289834597/peepeepoologo12.png')]
+    bg-cover
+    bg-no-repeat
+    bg-center absolute block w-full" data-carousel-item>
+              <p class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-2" 
+              id="firstFlashcard">How much wood would a woodchuck chuck if a woodchuck could chuck wood? He would chuck, he would, as much as he could, and chuck as much wood. As a wood chuck would if a woodchuck could chuck wood.</p>
+            </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out
+                bg-[url('https://cdn.discordapp.com/attachments/1143381987680329728/1145220376482295828/peepeepoologo13.png')]
+        bg-cover
+        bg-no-repeat
+        bg-center absolute block w-full" data-carousel-item>
+                  <p class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-2" 
+                  id="firstFlashcard">Betty Botter bought some butter. But she said the butter's bitter. If I put it in my batter, it will make my batter bitter. But a bit of better butter will make my batter better. So it was better Betty Botter bought a bit of better butter.</p>
+                </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+<!-- <a href="#" class="buttonMargin w-250 inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-cyan-900 hover:bg-cyan-800 focus:ring-4 focus:ring-cyan-300" id="refresh">
+Get a new set of TongueTwisters!</a> -->
+   <!-- Footer -->
+   <footer class="footer w-full
+   relative
+   overflow-hidden
+   block
+   z-10
+   
+   bg-[url('https://cdn.discordapp.com/attachments/1143381987680329728/1145217224756445204/peepeepoologo7.png')]
+   bg-cover
+   bg-no-repeat
+   bg-center
+   
+   before:content-['']
+   before:absolute
+   before:inset-0
+   before:block
+   before:bg-gradient-to-t
+   before:from-gray-800
+   before:to-transparent 
+   before:z-[-5]">
+     <div class="footer1">
+       <img class="socialMedias" src="https://cdn.discordapp.com/attachments/1143381987680329728/1145209882333679676/peepeepoologo6.png"/>
+       <p class="names font-medium">Frederick Chen, Enoch He, Saivenkat Jilla &nbsp &nbsp &nbsp &nbsp | &nbsp &nbsp &nbsp &nbsp ask@verbalyst.com</p>
+     </div>
+   </footer>
+
+ </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+<script src="../static/index.js" charset="UTF-8"></script>
+
+</body>
+</html>
