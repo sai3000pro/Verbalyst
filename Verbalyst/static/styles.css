@@ -1,5 +1,5 @@
 .one{
-    height:440px;
+    height:500px;
     background-color:rgb(8, 145, 178);
     display:flex;
     justify-content:center;
@@ -8,7 +8,7 @@
     padding-right:80px;
 }
 .two{
-    height:400px;
+    height:450px;
     background-color:white
 }
 .video{
@@ -71,4 +71,9 @@ font-size:15px;
     /* background-color:rgb(8, 145, 178); */
     background-color: transparent;
     padding:100px;
+}
+.tongueTwistTitle{
+    height:195px;
+    text-align:center;
+    vertical-align: middle;
 }
