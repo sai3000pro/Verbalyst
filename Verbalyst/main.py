@@ -25,7 +25,7 @@ def transcribe():
         return "No selected file"
 
     # Save the uploaded file temporarily
-    temp_file_path = './temp_file.mp4'
+    temp_file_path = './temp_file.mp3'
     uploaded_file.save(temp_file_path)
 
     # Perform transcription using the transcribe_audio function
