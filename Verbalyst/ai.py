@@ -32,8 +32,8 @@ def AIResponse(prompt):
     input: Thank you for your unwavering attention.
     output: You\'ve stuttered ZERO times! Congratulations for your skills and efforts- Can\'t wait to see you ace this speech!
 
-    input: Welcome to the world of Earth, where we have billions of people who are capable of murder and other sinful acts!
-    output: You\'ve stuttered ZERO times! Congratulations for your skills and efforts- Can\'t wait to see you ace this speech!
+    input: Welcome to the world of Earth, where we have billions of uh people who are capable of murder and other sinful acts!
+    output: You have stuttered only once, so keep up the great work! Your speech still has room for improvement, but don\'t be discouraged!
 
     input: {prompt}
 
