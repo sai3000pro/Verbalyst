@@ -2,12 +2,12 @@ import vertexai
 from vertexai.language_models import TextGenerationModel
 
 def AIResponse(prompt):
-    vertexai.init(project="pragmatic-ruler-392220", location="us-central1")
+    vertexai.init(project="strange-reducer-392221", location="us-central1")
     parameters = {
         "candidate_count": 1,
-        "max_output_tokens": 256,
+        "max_output_tokens": 1024,
         "temperature": 0.2,
-        "top_p": 0.8,
+        "top_p": 0.95,
         "top_k": 40
     }
     model = TextGenerationModel.from_pretrained("text-bison@001")
@@ -46,5 +46,9 @@ def AIResponse(prompt):
     """,
         **parameters
     )
-    return (response.text)
+    return response.text
 
+# lets me test stuff just in this file
+if __name__ == "__main__":
+    result = AIResponse("FUCK YOU er")
+    print(result)

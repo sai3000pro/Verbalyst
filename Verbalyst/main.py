@@ -30,7 +30,6 @@ def transcribe():
 
     # Perform transcription using the transcribe_audio function
     transcription_result = transcribe_audio(uploaded_file)
-    print(transcription_result)
     # Remove the temporary file
     # import os
     # os.remove(temp_file_path)
