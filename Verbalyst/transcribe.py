@@ -6,6 +6,7 @@ def transcribe_audio(file_path):
     transcript = transcriber.transcribe(file_path)
     return transcript.text
 
+# lets me test stuff just in this file
 if __name__ == "__main__":
     result = transcribe_audio("./downloads/enoch.mp4")
     print(result)

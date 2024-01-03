@@ -5,7 +5,7 @@ from ai import AIResponse
 app = Flask(__name__)
 
 
-aai.settings.api_key = "eaa0657c5e5844c383119c365b4a5831"
+aai.settings.api_key = '${process.env.AAI}'
 
 # Import the transcribe_audio function from transcribe.py
 from transcribe import transcribe_audio
