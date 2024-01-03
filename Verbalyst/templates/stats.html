@@ -135,7 +135,7 @@
         };
 
         // Define your data for bar chart
-       let myBarChart = new Chart(ctxBar, {
+        let myBarChart = new Chart(ctxBar, {
     type: 'bar',
     data: {
         labels: ['Lisps', 'Stutters', 'Repitition', 'Too Fast', 'Other'],
@@ -156,31 +156,34 @@
                 font: {
                     family: 'Inter',
                     size: 25,
-                    weight: '400' // '100' is the equivalent of 'thin'
+                    weight: '400'
                 },
                 color: '#083344'
             },
             legend: {
-              display: false
-          },
+                display: false
+            },
         },
         scales: {
-          y: {
-            ticks: {
-              color: 'black'
+            y: {
+                ticks: {
+                    color: 'black'
+                },
+                beginAtZero: true
             },
-            beginAtZero: true
-          },
-          x: {
-            ticks: {
-              color: 'black'
-              
+            x: {
+                ticks: {
+                    color: 'black'
+                },
+                title: {
+                    font: {
+                        family: 'Inter'
+                    }
+                }
             }
-          }
         }
     }
 });
-
 
 
 //         let myBarChart = new Chart(ctxBar, {
