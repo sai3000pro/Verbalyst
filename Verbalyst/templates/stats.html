@@ -80,7 +80,7 @@
     </div>
     <div class="inline-block w-250">
     <canvas id="barChart"></canvas>
-    <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Keep working on your stutters! &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+    <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Keep working on your stutters! &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
     </div>
     </div>
   </div>
@@ -124,23 +124,68 @@
     var ctxBar = document.getElementById('barChart').getContext('2d');
 
         // Define your data for line chart
-        var dataLine = {
-            labels: ['1', '2', '3', '4', '5', '6'],
-            datasets: [{
-                label: 'Total Speech Impediments',
-                borderColor: 'rgb(75, 192, 192)',
-                data: [8, 7, 5, 6, 4, 4],
-                fill: false
-            }]
-        };
+ // Define your data for line chart
+var dataLine = {
+    labels: ['1', '2', '3', '4', '5', '6'],
+    datasets: [{
+        label: 'Total Speech Impediments',
+        backgroundColor: '#0891b2',
+        borderColor: '#155e75',
+        data: [8, 7, 5, 6, 4, 4],
+        hoverBorderWidth: 4,
+        hoverBorderColor: '#083344',
+        fill: false
+    }]
+};
+
+var myLineChart = new Chart(ctxLine, {
+    type: 'line',
+    data: dataLine,
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Your speech patterns over time',
+                font: {
+                    family: 'Inter',
+                    size: 25,
+                    weight: '400'
+                },
+                color: '#083344'
+            },
+            legend: {
+                display: false
+            },
+        },
+        scales: {
+            y: {
+                ticks: {
+                    color: 'black'
+                },
+                beginAtZero: true
+            },
+            x: {
+                ticks: {
+                    color: 'black'
+                },
+                title: {
+                    font: {
+                        family: 'Inter'
+                    }
+                }
+            }
+        }
+    }
+});
+
 
         // Define your data for bar chart
         let myBarChart = new Chart(ctxBar, {
-    type: 'bar',
-    data: {
-        labels: ['Lisps', 'Stutters', 'Repitition', 'Too Fast', 'Other'],
+        type: 'bar',
+        data: {
+        labels: ['Stutters', 'Filler Words', 'Other'],
         datasets: [{
-            data: [5, 15, 4, 3, 15],
+            data: [15, 3, 5],
             backgroundColor: '#0891b2',
             borderWidth: 2,
             borderColor: '#155e75',
