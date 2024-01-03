@@ -35,7 +35,8 @@ def transcribe():
     # os.remove(temp_file_path)
 
     response_html = AIResponse(transcription_result)
-    return render_template('stats.html', response_html=response_html)
+    return render_template('stats.html', response_html=response_html, transcription_result=transcription_result)
+
 
 @app.route('/stats.html')
 def stats():
