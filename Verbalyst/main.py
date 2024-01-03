@@ -25,15 +25,15 @@ def transcribe():
         return "No selected file"
 
     # Save the uploaded file temporarily
-    temp_file_path = './temp_file.mp3'
-    uploaded_file.save(temp_file_path)
+    # temp_file_path = './temp_file.mp3'
+    # uploaded_file.save(temp_file_path)
 
     # Perform transcription using the transcribe_audio function
-    transcription_result = transcribe_audio(temp_file_path)
+    transcription_result = transcribe_audio(uploaded_file)
 
     # Remove the temporary file
-    import os
-    os.remove(temp_file_path)
+    # import os
+    # os.remove(temp_file_path)
 
     response_html = AIResponse(transcription_result)
     return render_template('stats.html', response_html=response_html)
