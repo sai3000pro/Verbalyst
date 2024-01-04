@@ -221,7 +221,7 @@ before:z-[-5]">
       })
       .catch(err=>{
           console.log(err.name, err.message);
-      })
+      });
   }
 
   navigator.mediaDevices.getUserMedia(constraintObj)
@@ -234,6 +234,11 @@ before:z-[-5]">
           //old version
           video.src = window.URL.createObjectURL(mediaStreamObj);
       }
+
+      video.onloadedmetadata = function(ev) {
+                //show in the video element what is being captured by the webcam
+                video.play();
+            };
       
       
       //add listeners for saving video/audio
