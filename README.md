@@ -6,7 +6,7 @@ In the process of being updated.
 
 Devpost link: https://devpost.com/software/verbalyst
 
-![video](https://youtu.be/DQIi4ZNcR2M)
+[![Video Title](http://img.youtube.com/vi/DQIi4ZNcR2M/0.jpg)](http://www.youtube.com/watch?v=DQIi4ZNcR2M)
 
 # Inspiration
 
