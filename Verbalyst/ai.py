@@ -44,5 +44,5 @@ def AIResponse(prompt):
 
 # lets me test stuff just in this file
 if __name__ == "__main__":
-    result = AIResponse("FUCK YOU er")
+    result = AIResponse("WORK YOU er")
     print(result)
